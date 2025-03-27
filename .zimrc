@@ -32,7 +32,6 @@ zmodule zsh-users/zsh-completions --fpath src
 # completion must be sourced after all modules that add completion definitions.
 zmodule completion
 
-
 #
 # Modules that must be initialized last
 #
