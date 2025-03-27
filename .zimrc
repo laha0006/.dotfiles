@@ -18,7 +18,7 @@ zmodule duration-info
 # Exposes git repository status information to prompts, used by asciiship.
 zmodule git-info
 # Exposes current working directory
-zmodule promt-pwd
+zmodule prompt-pwd
 # gitster minimalistic
 zmodule gitster
 
