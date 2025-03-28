@@ -911,11 +911,8 @@ require('lazy').setup({
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       vim.cmd.colorscheme 'github_dark_high_contrast'
-      
       vim.api.nvim_set_hl(0, 'LineNr', { fg = 'yellow', bold = true })
       vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'yellow', bold = true })
-      
-      vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
 
