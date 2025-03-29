@@ -694,6 +694,7 @@ require('lazy').setup({
         ts_ls = {
           filetypes = { 'typescript', 'javascript' },
         },
+        svelte = {},
         --
 
         lua_ls = {
