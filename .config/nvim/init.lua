@@ -919,6 +919,14 @@ require('lazy').setup({
     name = 'github-theme',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
+      local specs = {
+        github_dark_high_contrast = {
+          bg1 = '#010409',
+          bg0 = '#010409',
+        },
+      }
+      require('github-theme').setup { specs = specs }
+
       vim.cmd.colorscheme 'github_dark_high_contrast'
       vim.api.nvim_set_hl(0, 'LineNr', { fg = 'yellow', bold = true })
       vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'yellow', bold = true })
