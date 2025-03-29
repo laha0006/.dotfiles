@@ -935,9 +935,10 @@ require('lazy').setup({
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       local specs = {
-        github_dark_high_contrast = {
+        github_dark_high_contrast = { 
           bg1 = '#010409',
-          bg0 = '#010409',
+          bg0 = '#0A0A0A',
+          sel1 = '#020249',
         },
       }
       require('github-theme').setup { specs = specs }
