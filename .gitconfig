@@ -1,0 +1,8 @@
+[user]
+	email = 144362461+laha0006@users.noreply.github.com
+	name = "Lars"
+[init]
+	defaultBranch = main
+[push]
+	autoSetRemote = true
+	default = current
