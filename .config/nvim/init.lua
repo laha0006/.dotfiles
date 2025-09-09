@@ -161,13 +161,11 @@ vim.opt.scrolloff = 10
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
-
 -- TAB / SPACES settings
-vim.opt.tabstop = 4        -- Number of spaces a <Tab> counts for
-vim.opt.shiftwidth = 4     -- Number of spaces for each indentation level
-vim.opt.softtabstop = 4    -- Number of spaces inserted when pressing Tab
+vim.opt.tabstop = 4 -- Number of spaces a <Tab> counts for
+vim.opt.shiftwidth = 4 -- Number of spaces for each indentation level
+vim.opt.softtabstop = 4 -- Number of spaces inserted when pressing Tab
 vim.opt.expandtab = true
-
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -241,7 +239,7 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
---  'tpope/vim-sleuth',
+  --  'tpope/vim-sleuth',
   'ThePrimeagen/vim-be-good',
   {
     'stevearc/oil.nvim',
@@ -261,8 +259,7 @@ require('lazy').setup({
   {
     'ThePrimeagen/harpoon',
     branch = 'harpoon2',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    --    config = function()
+    dependencies = { 'nvim-lua/plenary.nvim' }, --    config = function()
     --      local harpoon = require("harpoon")
     --      harpoon:setup()
     --      vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
@@ -705,11 +702,16 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        ts_ls = {
-          filetypes = { 'typescript', 'javascript' },
+        -- ts_ls = {},
+        svelte = {
+          filetypes = {
+            'javascript',
+            'typescript',
+            'svelte',
+            'html',
+            'css',
+          },
         },
-        svelte = {},
-        --
 
         lua_ls = {
           -- cmd = { ... },
@@ -934,7 +936,7 @@ require('lazy').setup({
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       local specs = {
-        github_dark_high_contrast = { 
+        github_dark_high_contrast = {
           bg1 = '#010409',
           bg0 = '#0A0A0A',
           sel1 = '#020249',
@@ -1026,7 +1028,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-   require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
