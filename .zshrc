@@ -1,12 +1,3 @@
-# fnm
-export FNM_PATH="$HOME/.local/share/fnm"
-export PATH="$FNM_PATH/bin:$PATH"
-
-if command -v fnm >/dev/null 2>&1; then
-  eval "$(fnm env --use-on-cd)"
-fi
-
-
 ZIM_HOME=~/.zim
 
 # Download zimfw plugin manager if missing.
@@ -22,3 +13,13 @@ fi
 
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
+
+
+# fnm
+FNM_PATH="/home/tolana/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+node --version
