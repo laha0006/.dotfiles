@@ -1,9 +1,11 @@
 # fnm
-FNM_PATH="$HOME/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
+export FNM_PATH="$HOME/.local/share/fnm"
+export PATH="$FNM_PATH/bin:$PATH"
+
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd)"
 fi
+
 
 ZIM_HOME=~/.zim
 
